@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery</title>
+<style>
+	.important {
+		font-weight : bold;
+		font-size : 200%;
+		border : 2px dashed red;
+	}
+	
+	.blue {
+		color : blue;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Add/Remove CSS class</h1>
+<p id="p1">단락 1</p>
+<p id="p2">단락 2</p>
+<p id="p3">단락 3</p>
+<button type="button" id="add-class">Add Class</button>
+<button type="button" id="remove-class">Remove Class</button>
+
+<script>
+	$(document).ready(function() {
+		//addClass('클래스이름') : HTML 요소에 클래스 속성을 추가
+		// removeClass('클래스이름') : HTML 요소에 클래스 속성을 제거
+		$('#add-class').click(function() {
+			$('#p1').addClass('important');
+			$('#p2, #p3').addClass('blue');
+		});
+		
+		$('#remove-class').click(function() {
+			$('#p2, #p3').removeClass('blue');
+		});
+		
+		$('#toggle').click(function() {
+			$('#p2, #p3').toggleClass('blue');
+		});
+	});
+</script>
+
+
+
+</body>
+</html> 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+	p {
+		border : 1px solid grey;
+		width : 200px;
+		height : 200px;
+		background-color : lightyellow;
+		font-size : 200%;
+		text-align : center;
+	}
+</style>
+</head>
+<body>
+<h1>jQuery Event 2</h1>
+<p>TEST</p>
+
+<script>
+	$(document).ready(function() {
+		//$('selector').event(function() {});
+		// 하나의 HTML 요소에 여러개의 event handler를 등록
+		// $('selector').on({
+		//		event1 : function() {},
+		//		event2 : function() {},
+		//		.....
+		//	});
+	
+		$('p').on({
+			mouseover : function() {
+				$(this).css('background-color', 'pink');
+			},
+			mouseout : function() {
+				$(this).css('background-color', 'lightyellow');
+			},
+			click : function() {
+				if($(this).text() == 'TEST') {
+					$(this).text('안녕하세요........');
+				} else {
+					$(this).text('TEST');
+				}
+			}		
+		});
+	});
+	
+</script>
+
+</body>
+</html> 

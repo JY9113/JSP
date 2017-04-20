@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>jQuery</title>
+<style>
+#panel {
+	border: 1px solid grey;
+	background-color: lime;
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+</style>
+</head>
+<body>
+
+<h1>jQuery animate() 함수</h1>
+<button type="button" id="btn1">위치 이동</button>
+<div id="panel">jQuery animate</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function() {
+	$('#btn1').click(function() {
+		// animate(params, speed, callback)
+		// params : 애니메이션을 할 속성들(JavaScript Object)
+		$('#panel').animate({
+			left : '300px',
+			top : '100px',
+			opacity : '0.5'
+		}, 3000);
+	});
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery</title>
+</head>
+<body>
+<h1>jQuery CSS 변경 방법</h1>
+<p style="background-color:lightyellow"></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	// jQuery를 사용한 CSS 변경
+	// css('property', 'value');
+	// css({prop1: val1, prop2: val2, ...});
+	$('p').click(function() {
+		$(this).css({
+			font: '200% serif',
+			backgroundColor: 'lightgreen',
+			border: '1px solid grey',
+			textAlign: 'center'
+		});
+	});
+});
+</script>
+
+</body>
+</html> 

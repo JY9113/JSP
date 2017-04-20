@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<h1>jQuery getter / setter</h1>
+<p>우리는 <strong>jQuery</strong>를 공부하고 있습니다......</p>
+<button type="button" id="btn1">Get HTML</button>
+<button type="button" id="btn2">Text</button>
+
+<div id="output"></div>
+	
+<script>
+	$(document).ready(function() {
+		// 대부분의 jQuery 함수들은 매개변수의 개수에 따라서
+		// getter와 setter로 사용 가능
+		// html() : HTML 요소 내부의 html 코드를 리턴(getter)
+		// html('문자열') : HTMl 요소 내부에 html 코드를 씀(setter)
+		// text() : HTML 요소 내부의 텍스트(문자열)을 리턴
+		// text('문자열') : HTML 요소 내부에 텍스트(문자열)
+		// attr('attr이름') : 속성(attribute)의 값을 리턴
+		// attr('attr 이름', 'attr 값') : 속성(attr)의 값을 설정
+		// css('css 프로퍼티 이름') : css 프로퍼티 값을 리턴
+		// css('property', 'value') : css 프로퍼티에 값을 설정
+		// val() : input 상자에 입력된 값을 리턴
+		// val('값') : input 상자에 값을 씀
+		
+		$('#btn1').click(function() {
+			var msg = $('p').html();	// innerHTML에 해당, getter
+			$('#output').html(msg);	// setter
+		});
+		
+		$('#btn2').click(function() {
+			var msg = $('p').text();	// textContent
+			$('#output').html(msg);			
+		});
+		
+		
+	
+	
+	});
+</script>
+</body>
+</html> 

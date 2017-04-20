@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>jQuery</title>
+<style>
+	#panel {
+		border : 1px solid grey;
+		background-color : lime;
+		width : 200px;
+		height : 200px;
+	}
+</style>
+</head>
+<body>
+
+<h1>jQuery 애니메이션 함수들</h1>
+<button type="button" id="btn1">Hide</button>
+<button type="button" id="btn2">Show</button>
+<button type="button" id="btn3">Toggle</button>
+<div id="panel">Animation</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		// hide(speed, callback)
+		//  (speed, callback)
+		// toggle(speed, callback)
+		
+		$('#btn1').click(function() {
+			$('#panel').slideUp(3000, function() {
+				alert("Hello");
+			});
+		});
+		
+		$('#btn2').click(function() {
+			$('#panel').show(3000);
+		});
+		
+		$('#btn3').click(function() {
+			$('#panel').slideToggle(3000);
+		});
+	});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
