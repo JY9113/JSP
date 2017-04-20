@@ -50,10 +50,7 @@ public class MemberJoinServlet extends HttpServlet {
 		int result = service.create(vo);
 		if(result == 1) {
 			response.sendRedirect("member-main");
-		}
-		
-		
-	
+		}	
 	}
 	
 }

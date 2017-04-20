@@ -14,10 +14,12 @@ public interface MemberDAO {
 	public static final String SQL_DELETE = "delete from " + MEMBER_TABLE + " where " + COL_USERID + " = ?";
 	public static final String SQL_UPDATE = "update " + MEMBER_TABLE + " set " + COL_PWD + " = ?, " +
 																COL_EMAIL + " = ?, " + COL_ACTIVE + " = ? where " + COL_USERID + " = ?";
+	public static final String SQL_CHECK_ID_PW ="select * from " + MEMBER_TABLE +" where " + COL_USERID + " = ? and "
+																		+ COL_PWD  + " = ?";
 	
 	public abstract int insert(MemberVO vo);
 	public abstract int delete(String userid);
 	public abstract int update(MemberVO vo);
 	public abstract List<MemberVO> selectAll();
-	public abstract MemberVO selectByID(String userid);
+	public abstract MemberVO checkIdPW(String userid, String pwd);
 }

@@ -26,9 +26,19 @@
 <body>
 <div class="mainContent">
 	<h1 style="text-align:center">게시판 메인 페이지</h1>
-	<ul> 
-		<li><a href="board-insert">새글 작성</a></li>
-	</ul>
+	<c:if test="${empty userid }">
+		<ul> 
+			<li><a href="login">로그인</a></li>
+			<li><a href="board-insert">새글 작성</a></li>
+		</ul>
+	</c:if>
+	<c:if test="${not empty userid }">
+		${userid}님, 환영합니다 !!!! <br/>	
+		<ul> 
+			<li><a href="logout">로그아웃</a></li>
+			<li><a href="board-insert">새글 작성</a></li>
+		</ul>	
+	</c:if>
 	<hr/>
 	<table>
 		<thead>

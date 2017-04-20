@@ -17,7 +17,7 @@ public class MemberDAOImple implements MemberDAO{
 	
 	public static MemberDAOImple getInstance() {
 		if(instance == null) {
-			instance = MemberDAOImple.getInstance();
+			instance = new MemberDAOImple();
 		}
 		return instance;
 	}
@@ -111,25 +111,24 @@ public class MemberDAOImple implements MemberDAO{
 	}
 	
 	@Override
-	public MemberVO selectByID(String userid) {
+	public MemberVO checkIdPW(String userid, String pwd) {
 		Connection conn = ConnMgr.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		MemberVO vo = null;
 		try {
-			pstmt = conn.prepareStatement(SQL_SELECT_BY_ID);
+			pstmt = conn.prepareStatement(SQL_CHECK_ID_PW);
 			pstmt.setString(1, userid);
+			pstmt.setString(2, pwd);
 			rs = pstmt.executeQuery();
 			
-			if(rs != null) {
-				String getUserid = rs.getString(1);
-				String pwd = rs.getString(2);
+			if(rs.next()) {
 				String email = rs.getString(3);
 				String active = rs.getString(4);
-				vo = new MemberVO(getUserid, pwd, email, active);
+				vo = new MemberVO(userid, pwd, email, active);
 			}
 			
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			ConnMgr.close(conn, pstmt, rs);

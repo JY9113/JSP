@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import edu.web.board.domain.BoardVO;
 import edu.web.board.service.BoardService;
@@ -36,9 +37,19 @@ public class BoardInsertServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/board/board-insert-form.jsp");
-		dispatcher.forward(request, response);
+		// 세션 객체에서 로그인 정보가 있는지 확인.
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("userid");
+		
+		if(id != null && !id.equals("")){
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/board/board-insert-form.jsp");
+			dispatcher.forward(request, response);
+		} else {
+			// 로그인 정보가 없어서 로그인하러 가야함.
+			// 로그인 후에 다시 띄워 줄 페이지 정보를 세션에 attr 로 저장해서 보내자.
+			session.setAttribute("targetURL", "board-insert");
+			response.sendRedirect("login");
+		}		
 	}
 
 	/**

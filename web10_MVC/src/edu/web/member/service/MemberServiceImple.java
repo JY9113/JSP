@@ -16,7 +16,7 @@ public class MemberServiceImple implements MemberService{
 	}
 	public static MemberServiceImple getInstance() {
 		if(instance == null ) {
-			instance = MemberServiceImple.getInstance();
+			instance = new MemberServiceImple();
 		}
 		return instance;
 	}
@@ -37,15 +37,18 @@ public class MemberServiceImple implements MemberService{
 		
 		return list;
 	}
-	
 	@Override
-	public MemberVO read(String userid) {
-		return dao.selectByID(userid);
+	public int update(MemberVO vo) {
+		return dao.update(vo);
 	}
 	
 	@Override
-	public int update(MemberVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+	public boolean loginCheck(String id, String pw) {
+		MemberVO vo = dao.checkIdPW(id, pw);
+		if(vo != null) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

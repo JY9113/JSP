@@ -8,7 +8,8 @@ public interface MemberService {
 	
 	public abstract List<MemberVO> read();
 	public abstract int create(MemberVO vo);
-	public abstract MemberVO read(String userid);
 	public abstract int update(MemberVO vo);
 	public abstract int delete(String userid);
+	
+	public abstract boolean loginCheck(String id, String pw);
 }

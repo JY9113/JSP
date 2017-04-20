@@ -43,16 +43,15 @@ public class BoardMainServlet extends HttpServlet {
 		System.out.println("BoardMainServlet : list size = " + list.size());
 		request.setAttribute("boardList", list);
 		
-		RequestDispatcher disaptcher = request.getRequestDispatcher("/WEB-INF/board/board-main.jsp");
-		disaptcher.forward(request, response);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/board/board-main.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
 	}
 
 }

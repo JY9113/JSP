@@ -11,7 +11,7 @@
 <form action="board-insert" method="post">
 	<input type="text" name="title" placeholder="제목 입력" required/><br/>
 	<textarea rows="5" cols="40" name="content" placeholder="본문을 작성하세요" required></textarea><br/>
-	<input type="text" name="userid" placeholder="아이디를 넣으세요"/><br/>
+	<input type="text" name="userid" value="${userid }" required readonly/><br/>
 	<input type="submit" value="작성 완료"/>
 </form>
 </body>
