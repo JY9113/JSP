@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource name="bean/MyBeanFactory"
+		type="edu.web.bean.model.MyBean"
+		factory="org.apache.naming.factory.BeanFactory"
+		auth="Container" />
+	<Resource name="bean/MyBeanFactory2"
+		type="edu.web.bean.model.MyBean"
+		factory="org.apache.naming.factory.BeanFactory"
+		auth="Container"
+		myNumber="12345"
+		myName="JAVA BEAN" />
+	
+	<!-- DBCP(DataBase Connection Pool)을 사용하기 위한 
+	     Java Bean 설정 -->
+	<Resource name="dbcp/oraclexe"
+		type="javax.sql.DataSource"
+		auth="Container"
+		driverClassName="oracle.jdbc.OracleDriver"
+		url="jdbc:oracle:thin:@localhost:1521:XE"
+		username="scott"
+		password="tiger"
+		maxTotal="100"
+		maxIdle="30"
+		maxWaitMillis="10000" />
+</Context>
+
+
+
+
+
+
+
