@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript</title>
+</head>
+<body>
+
+<h1>HTML Event</h1>
+<input type="text" name="userid" id="userid" onfocus="changeBgColor(this)" onblur="resetBgColor(this)" onchange="toUpper(this)"/>
+<br/><br/>
+<select  onchange="select(this)">
+<!--
+	<option>Red</option>
+	<option>Green</option>
+	<option>Blue</option>
+	-->
+	<option value="1">빨강</option>
+	<option value="2">초록</option>
+	<option value="3">파랑</option>
+</select>
+
+<script>
+	function changeBgColor(input) {
+		input.style.backgroundColor = 'lavender';	
+	}	
+	function resetBgColor(input) {
+		input.style.backgroundColor = 'white';
+	}	
+	// onchange : 입력 내용이 바꼈을 때(입력 후 엔터나 tab 키)
+	//					-> 입력 내용을 모두 대문자로 바꿈
+	function toUpper(input) {
+		input.value = input.value.toUpperCase();
+	}
+	<!-- function select(sel) { -->
+		<!-- var color = sel.value.toLowerCase(); -->
+		<!-- document.body.style.backgroundColor = color; -->
+	<!-- } -->
+	
+	function select(sel) {
+		var value = sel.value;
+		switch(value) {
+			case "1" :
+			 document.body.style.backgroundColor = 'red';
+			 break;
+			case "2" :
+			 document.body.style.backgroundColor = 'green';
+			 break;
+			case "3" :
+			 document.body.style.backgroundColor = 'blue';
+			 break;
+		}	
+	}
+</script>
+
+</body>
+</html>

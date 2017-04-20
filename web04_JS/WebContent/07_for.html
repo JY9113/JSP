@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript</title>
+</head>
+<body>
+
+<h1>JavaScript for 문, 전역/지역 변수</h1>
+<div id="output"></div>
+
+<script>
+// JavaScript의 전역 변수(global variable):
+//   <script> 태그 안에서 선언된 변수
+//   선언된 위치와 상관 없이 변수 선언부분을 script의 첫부분으로 이동
+// JavaScript의 지역 변수(local variable):
+//   함수(function) 내부에서 선언된 변수
+
+var output = document.getElementById('output');
+output.innerHTML += 'i = ' + i + '<br/>';
+
+//var x = 10;
+//var x = 123;
+for (var i = 1; i <= 6; i++) {
+	output.innerHTML 
+		+= '<h' + i + '> Heading ' + i + '</h' + i + '>';
+}
+output.innerHTML += 'i = ' + i + '<br/>';
+
+// 함수 정의
+function test() {
+	var n = 10; // 지역 변수
+	output.innerHTML += 'test() 내부: i = ' + i + '<br/>';
+	output.innerHTML += 'test() 내부: n = ' + n + '<br/>';
+}
+
+// 함수 호출(call)
+test();
+
+// output.innerHTML += 'test() 외부: n = ' + n + '<br/>';
+// 지역 변수 n은 함수 외부에서는 소멸되는 변수 - 에러 발생
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

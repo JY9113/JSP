@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript</title>
+</head>
+<body>
+
+<h1>생성자 함수 proto type 변경</h1>
+<div id="output"></div>
+
+<script>
+var output = document.getElementById('output');
+
+// 생성자 함수
+function Unit(name, money) {
+	this.name = name;
+	this.money = money;
+	this.power = 100;
+}
+
+// 생성자 함수의 proto type을 변경:
+// delete Unit.prototype.name;
+Unit.prototype.gas = 0;
+Unit.prototype.attack = function() {
+	output.innerHTML += this.name + '가 공격합니다!!!';
+};
+
+var unit1 = new Unit('scv', 50);
+for (x in unit1) {
+	output.innerHTML += x + ': ' + unit1[x] + '<br/>';
+}
+unit1.attack();
+
+var unit2 = new Unit('probe', 50);
+unit2.attack();
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

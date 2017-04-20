@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+	h1 {
+		background-color : #FAFAD2;
+		border : 2px dashed navy;
+		color : navy;
+		font-size : 2em;
+		text-align : center;
+	}	
+	.main-panel {
+		font-size : 2em;
+		font-weight : bold;
+		text-align : center;
+		background-color : #D2FFD2;
+	}
+	
+	.sub-panel {
+		font-size : 1em;
+		font-weight : normal;
+		color : black;
+		border : 1px solid white;
+		display : none;
+	}
+	li {
+		list-style-type : none;
+	}
+</style>
+</head>
+<body>
+<h1 id="title">Visibility / Display 속성 변경</h1>
+<button type="button" onclick="hide()">Hide</button>
+<button type="button" onclick="show()">Show</button>
+<button type="button" onclick="none()">Show</button>
+<button type="button" onclick="block()">Show</button>
+<!--
+	button 태그의 type 속성 : 
+		1. button : 클릭할 수 있는 버튼
+		2. submit : form의 데이터들을 서버로 전송 (type 속성의 기본값!)
+		3. reset : form의 입력된 데이터들을 리셋(지움)
+-->
+<div class="main-panel" onclick="toggleSub()">
+Main Panel - Click Me!
+		<div class="sub-panel" id="sub">
+			<ul>
+				<li><a href="http://www.google.com">구글</a></li>
+				<li><a href="http://www.naver.com">네이버</a></li>
+				<li><a href="http://www.daum.net">다음</a></li>
+			</ul>
+		</div>
+</div>
+<script>
+var title = document.getElementById('title');
+<!-- 첫번째 방법 -->
+var sub = document.getElementsByClassName('sub-panel')[0];
+<!-- 두번째 방법 --> 
+	//var sub = document.querySelector('.sub-panel');
+<!-- 세번째 방법 -->
+	// 함수 파라미터에 this 주기 
+<!-- 네번째 방법 -->
+	// var sub = document.getElementById('sub');
+
+var control = true;
+
+function hide() {
+	title.style.visibility = 'hidden';
+}
+
+function show() {
+	title.style.visibility = 'visible';
+}
+
+function none() {
+	title.style.display = 'none';
+}
+
+function block() {
+	title.style.display = 'block';
+}
+
+function toggleSub() {
+	if(control == true) {
+	// if(sub.style.display === 'none' || sub.style.display === '') {
+		sub.style.display = 'block';
+		control = false;
+	} else if(control == false) {
+	// else (sub.style.display == 'block' ) {
+		sub.style.display='none';
+		control = true;
+	}
+}
+
+//세번째 방법일 경우
+/*
+	function toggleSub(parent) {
+		var sub = parent.firstElementChild;
+		sub.style.display = 'block';
+	}
+
+*/
+</script>
+
+</body>
+</html> 

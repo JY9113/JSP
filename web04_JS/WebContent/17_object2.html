@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+<h1> JavaScript</h1>
+<div id="output"></div>
+
+<script>
+	var output = document.getElementById('output');
+	
+	var person = {
+		name : '도봉순',
+		phone :  {home : '02-1234-1234', mobile : '010-1111-1111'},
+		email : ['dbs', 'abc'] /*배열*/		
+	};
+	
+	output.innerHTML += person.phone.home + '<br/>';
+	output.innerHTML += person['phone'].mobile + '<br/>';
+	output.innerHTML += person['phone']['mobile'] + '<br/>';
+	output.innerHTML += person.email[0] + '<br/>';
+	output.innerHTML += person['email'][1] + '<br/>';
+	
+	output.innerHTML += '<hr/>';
+	function Person(name, phone, email) {
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+	}
+	
+	function Phone(home, mobile) {
+		this.home = home;
+		this.mobile = mobile;
+	}
+	
+	var phone = new Phone('02-1111-1111', '010-2222-2222');
+	var person2 = new Person('공유', phone, ['aaa', 'bbb']);
+	output.innerHTML += person2.name + '<br/>';
+	output.innerHTML += person2.phone.mobile + '<br/>';
+	output.innerHTML += person2.email[0] + '<br/>';
+	
+	output.innerHTML += '<hr/>';
+var person3 = new Person('오쌤', {
+	home: '02-123-4567',
+	mobile: '010-1111-4567',
+	office: '02-7000-0000'
+}, 'ssam@itwill.com');
+output.innerHTML += person3.phone.office + '<br/>';
+output.innerHTML += person3.email + '<br/>';
+
+	
+</script>
+</body>
+</html> 

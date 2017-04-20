@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+<h1>JavaScript 배열(Array)</h1>
+<div id="output"></div>
+
+<script>
+	var output = document.getElementById('output');
+	
+	// 자바스크립트에서 배열 선언 / 초기화 방법 1:
+	// var 배열이름 = [원소1, 원소2.....];
+	
+	var dramas = ['도봉순', '도깨비'];
+	var i;
+	for(i = 0; i< dramas.length; i++) {
+		output.innerHTML += dramas[i] + '<br/>';
+	}
+	
+	// for-in 구문(자바의 enhanced-for 구문)
+	// for(String x : dramas) {} - 자바 문법
+	// 자바스크립트는 for-in 구문에서 x는 배열의 인덱스
+	for (x in dramas) {	// javascript의 x 는 index 만 가져온다
+		output.innerHTML += x + ' : ' + dramas[x] +  '<br/>';
+	}
+	
+	// 자바스크립트에서 배열 선언 / 초기화 방법 2:
+	// var 배열이름 = new Array(원소1, 원소2...);
+	
+	var fanclub = new Array('도봉순', '도깨비');
+	for(x in fanclub) {
+		output.innerHTML += x + ' = ' + fanclub[x] + '<br/>';
+	}
+	
+</script>
+
+</body>
+</html> 

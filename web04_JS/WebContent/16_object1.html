@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+<h1 id="output">자바스크립트 객체(Object)</h1>
+
+<script>
+	var output = document.getElementById('output');
+	
+	/* 
+		JSON : Javascript object Notation(자바스크립트 객체 표기법)
+		{프로퍼티 : 값, 프로퍼티 : 값 ...}
+		{userid : "admin", password : "admin123", email : "admin@test.com"};
+		
+		자바스크립트에서 객체를 선언 / 초기화
+		var 객체이름 = {
+			property1 : value1,
+			property2 : value2,
+			....		
+		};
+		자바스크립트 객체의 프로퍼티의 값을 참조 :
+		객체이름.property1, 객체이름['property1']
+	*/
+	var person = {
+		name : '오쌤',
+		age : 16,
+		email : 'ssam@test.com'
+	};
+	output.innerHTML += person + '<br/>';
+	output.innerHTML += person.name + '<br/>';
+	output.innerHTML += person.age + '<br/>';
+	output.innerHTML += person['email'] + '<br/>';
+	// for-in 구문을 사용한 자바스크립트 객체의 프로퍼티 접근
+	for( x in person) {
+		output.innerHTML += person[x] + '<br/>';
+	}
+	// 자바스크립트 객체 생성 방법 2 : Object 생성자 함수 이용 -> 권장하지 않음
+	
+	var person2 = new object();
+	person2.name = '도봉순';
+	person2.age = 15;
+	person2['email'] = 'dbs@jtbc.com';
+	
+	for(x in person2) {
+		output.innerHTML += x + ' : ' + person2[x] + '<br/>';
+	}
+	
+	// 자바스크립트 객체 선언 / 초기화 방법 3: 생성자 함수를 작성 / 호출
+	function Person(name, age, email) {
+		this.name = name;
+		this.age = age;
+		this.email = email;	
+	}
+	
+	var p1 = new Person('공유', 30, 'ky@test.com');
+	for (x in p1) {
+		output.innerHTML += x + ' : ' + p1[x] + '<br/>';
+	}
+	
+	output.innerHTML += p1.name + '<br/>';
+	output.innerHTML += p1['name'] + '<br/>';
+</script>
+
+</body>
+</html> 

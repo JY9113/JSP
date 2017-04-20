@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<h1>JavaScript Method : 객체가 가지고 있는 함수</h1>
+<div id="output"></div>
+<script>
+	var output = document.getElementById('output');
+	
+	// 생성자 함수
+	function Unit(money, gas, ph) {
+		/* property */
+		this.money = money;
+		this.gas = gas;
+		this.ph = ph;
+		/* method */
+		this.attack = function(unit) {
+			unit.ph -= 10;
+			output.innerHTML += unit.ph + '<br/>';
+		};
+		this.toString = function() {
+			// 유닛의 money, gas, ph를 문자열로 리턴
+			return 'money : ' + money + ' gas : ' + gas + ' ph : ' + ph;
+		}
+	}
+	
+	var zilot = new Unit(100, 0, 60);
+	var marine = new Unit(50, 0, 40);
+	zilot.attack(marine);
+	zilot.attack(marine);
+	zilot.attack(marine);
+	zilot.attack(marine);
+	output.innerHTML += zilot.toString() + '<br/>';
+</script>
+</body>
+</html> 

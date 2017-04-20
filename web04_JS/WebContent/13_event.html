@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<h1 id="title" onclick="test1()" onmouseover="test2()" onmouseout="test3()">JavaScript Event 처리</h1>
+
+<script>
+
+	var title = document.getElementById('title');
+	var toggle = true;
+	function test1() {
+			if (toggle) {
+				title.innerHTML = '자바스크립트 이벤트 처리';
+				toggle = false;
+			} else {
+				title.innerHTML = 'JavaScript Event Handling';
+				toggle = true;
+			}
+	}
+	
+	function test2() {
+		title.style.backgroundColor = 'hotpink';
+		title.style.color = 'white';	
+	}
+	
+	function test3() {
+		title.style.backgroundColor = 'white';
+		title.style.color = 'black';	
+	}
+</script>
+
+</body>
+</html> 

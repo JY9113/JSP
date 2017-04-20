@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript</title>
+</head>
+<body>
+
+<h1>JavaScript String 메소드</h1>
+<div id="output"></div>
+
+<script>
+var output = document.getElementById('output');
+
+var str1 = '안녕하세요'; // 문자열 상수(String literal)
+var str2 = '안녕하세요';
+if (str1 === str2) {
+	output.innerHTML += '같은 객체<br/>';
+} else {
+	output.innerHTML += '다른 객체<br/>';
+}
+
+var str3 = new String('안녕하세요'); // 생성자 함수
+var str4 = new String('안녕하세요');
+if (str3 === str4) {
+	output.innerHTML += '같은 객체<br/>';
+} else {
+	output.innerHTML += '다른 객체<br/>';
+}
+
+var str5 = '안녕, 자바스크립트! "자바스크립트"는 쉬어요';
+// length: 메소드가 아니라 property임
+output.innerHTML += 'length: ' + str5.length + '<br/>';
+output.innerHTML += 'indexOf(): ' 
+		+ str5.indexOf('자바스크립트') + '<br/>';
+output.innerHTML += 'lastIndexOf(): '
+		+ str5.lastIndexOf('자바스크립트') + '<br/>';
+// search(): 일치하는 문자열의 인덱스를 리턴
+output.innerHTML += 'search(): '
+		+ str5.search('자바스크립트') + '<br/>';
+output.innerHTML += 'search(): '
+		+ str5.search(/자바스크립트/) + '<br/>';
+// match(): 일치하는 문자열을 리턴
+output.innerHTML += 'match(): '
+		+ str5.match('자바스크립트') + '<br/>';
+output.innerHTML += 'match(): '
+		+ str5.match(/자바스크립트/g) + '<br/>';
+
+// slice(startIndex, endIndex)
+// startIndex는 포함, endIndex - 1까지 문자열을 자르기
+// 음수 인덱스가 가능
+output.innerHTML += 'slice(): ' + str5.slice(4, 11) + '<br/>';
+output.innerHTML += 'slice(): ' + str5.slice(-12, -6) + '<br/>';
+// substring(startIndex, endIndex)
+// 음수 인덱스를 갖지 못함
+output.innerHTML += 'substring(): ' + str5.substring(4, 11) + '<br/>';
+// substr(startIndex, length)
+output.innerHTML += 'substr(): ' + str5.substr(4, 11) + '<br/>';
+
+var str6 = 'Hello, Javascript! "javascript" is easy';
+output.innerHTML += 'replace(): ' + str6.replace('javascript', 'JAVASCRIPT') + '<br/>';
+output.innerHTML += 'replace(): ' + str6.replace(/javascript/gi, 'JAVASCRIPT') + '<br/>';
+// JavaScript 정규표현식: /패턴/옵션
+// 옵션: 
+// 1) g(global): 일치하는 모든 패턴을 찾음
+// 2) i(case-insensitive): 대소문자 구분 없이 패턴을 찾음
+
+var str7 = 'JavaScript';
+output.innerHTML += str7.toUpperCase() + '<br/>';
+output.innerHTML += str7.toLowerCase() + '<br/>';
+
+var str8 = 'admin|admin1234|admin@test.com';
+var info = str8.split('|');
+output.innerHTML += 'split length: ' + info.length + '<br/>';
+for (var i = 0; i < info.length; i++) {
+	output.innerHTML += info[i] + '<br/>';
+}
+
+var str9 = '     Hello,     JavaScript!     ';
+output.innerHTML += '<pre>' + str9 + '</pre>';
+output.innerHTML += '<pre>' + str9.trim() + '</pre>';
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

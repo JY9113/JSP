@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+<h1>JavaScript function</h1>
+<div id="output"></div>
+
+<script>
+	var output = document.getElementById('output');
+	
+	// 자바스크립트 함수는 매개변수 개수와 타입을 체크하지 않기 때문에
+	// 함수 overloading을 할 수 없음
+	// -> 같은 이름으로 함수를 정의하면, 나중에 정의한 함수가 이전 함수 정의를 덮어씀(overriding)
+	
+	function add(x) {
+		return x + 1;
+	}
+	
+	function add(x, y) {
+		return x + y;
+	}
+
+	var result = add(10, 20);
+	output.innerHTML += 'result = ' + result + '<br/>';
+	
+	var result = add(10);
+	output.innerHTML += 'result = ' + result + '<br/>';
+	
+	output.innerHTML = '<hr/>';
+	
+	// NaN: Not a Number(숫자가 아니다)
+	// isNaN(a): a가 숫자가 아니면 true, 숫자이면 false를 리턴하는 함수
+
+
+	function add2(x, y) {
+	if (isNaN(x) || isNaN(y)) {
+		return '숫자가 아니어서 덧셈할 수 없습니다!';
+	}
+		return x + y;
+	}
+
+	result = add2(10, 'Hello');
+	output.innerHTML += 'result = ' + result + '<br/>';
+
+	result = add2(100, 200);
+	output.innerHTML += 'result = ' + result + '<br/>';
+
+	// arguments 객체: 함수에 전달된 인자(매개변수)를 저장하는 (배열) 객체
+	// arguments.length: 매개변수 개수
+	// arguments[i]: i번째 매개변수
+	output.innerHTML += '<hr/>';
+	function test() {
+		output.innerHTML += 
+			'test() 매개변수 개수: ' + arguments.length + '<br/>';
+		var i;
+		for (i = 0; i < arguments.length; i++) {
+			output.innerHTML += arguments[i] + '<br/>';
+		}
+	}
+	test(111);
+	test(111, 222);
+	
+	
+	<!-- function findMax() { -->
+		<!-- if (arguments.length == 0) { -->
+			<!-- return '매개변수를 넣으세요'; -->
+		<!-- }		 -->
+		<!-- var i; //index -->
+		<!-- var max = arguments[0]; -->
+		
+		<!-- for(i = i; i < arguments.length; i++) { -->
+			<!-- max = (max < arguments[i]) ? arguments[i] : max; -->
+			<!-- if (max < arguments[i]) { -->
+				<!-- max = arguments[i]; -->
+			<!-- } -->
+		<!-- } -->
+		<!-- return max; -->
+	<!-- } -->
+
+	function findMax() {
+		var i, max;
+		max = arguments[0];
+		if ( isNan(i) && isNan(max)) {
+			for (i = 1; i < arguments.length; i++) {
+				if (arguments[i] > max) {
+					max = arguments[i];
+				}
+			}
+			return max;
+		}
+	}	
+
+	result = findMax(10, 0, 100, 90);
+	output.innerHTML += '최대값: ' + result + '<br/>';
+
+
+	
+
+
+</script>
+</body>
+</html> 

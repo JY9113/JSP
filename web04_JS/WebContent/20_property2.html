@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript</title>
+</head>
+<body>
+
+<h1>JavScript Object Property</h1>
+<div id="output"></div>
+
+<script>
+var output = document.getElementById('output');
+
+// 생성자 함수
+function Unit(name, money) {
+	this.name = name;
+	this.money = money;
+}
+
+var unit1 = new Unit('probe', 50);
+for (x in unit1) {
+	output.innerHTML += x + ': ' + unit1[x] + '<br/>';
+}
+output.innerHTML += '<hr/>';
+
+// 생성된 객체에 새로운 프로퍼티 추가
+unit1.gas = 100;
+// 생성된 객체가 가지고 있는 프로퍼티 삭제
+delete unit1.name;
+for (x in unit1) {
+	output.innerHTML += x + ': ' + unit1[x] + '<br/>';
+}
+output.innerHTML += '<hr/>';
+
+// 생성자 함수가 변경된 것은 아니기 때문에
+// 생성자 함수를 사용해서 새로운 객체를 생성하면 기존 구조(proto type)로 만들어짐
+var unit2 = new Unit('scv', 50);
+for (x in unit2) {
+	output.innerHTML += x + ': ' + unit2[x] + '<br/>';
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript</title>
+</head>
+<body>
+
+<h1 id="title">자바스크립트가 할 수 있는 일들</h1>
+<button onclick="changeCSS()">클릭하세요!</button>
+<!--  
+1. HTML 요소(element)의 컨텐트를 변경
+2. HTML 요소(element)의 속성(attribute)를 변경
+3. HTML 요소(element)의 스타일(CSS)를 변경
+4. 입력 양식의 데이터를 체크
+-->
+
+<p id="output" onclick="changeText()">Hello, JavaScript!</p>
+<figure>
+	<img alt="전구" src="images/bulb_off.gif"
+		id="img-bulb" onclick="changeImage()" />
+	<figcaption>전구를 클릭하세요!</figcaption>
+</figure>
+
+<input id="input-age" type="number" placeholder="나이 입력" />
+<button onclick="checkAge()">체크</button>
+
+<script>
+function changeText() {
+	var out = document.getElementById('output');
+	if (out.innerHTML.match('Hello, JavaScript!')) {
+		out.innerHTML = '안녕, 자바스크립트!';
+	} else {
+		out.innerHTML = 'Hello, JavaScript!';
+	}
+	
+} // end changeText()
+
+function changeImage() {
+	var img = document.getElementById('img-bulb');
+	if (img.src.match('images/bulb_off.gif')) {
+		img.src = 'images/bulb_on.gif';
+	} else {
+		img.src = 'images/bulb_off.gif';
+	}
+} // end changeImage()
+
+function changeCSS() {
+	var title = document.getElementById('title');
+	title.style.backgroundColor = 'cyan';
+	title.style.fontSize = '300%';
+	title.style.color = 'red';
+} // end changeCSS()
+
+function checkAge() {
+	var inputAge = document.getElementById('input-age');
+	var age = inputAge.value;
+	if (age < 0) {
+		alert('나이를 잘못 입력했습니다! 다시입력하세요!');
+	} else {
+		alert(age + '살이군요~~~');
+	}
+} // end checkAge()
+</script>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript</title>
+</head>
+<body>
+
+<h1>자바스크립트 출력 방법</h1>
+<h2>document.write() 함수 사용</h2>
+<script>
+document.write('<p>안녕하세요~</p>');
+</script>
+<button onclick="test()">Click!</button>
+
+<hr/>
+<h2>innerHTML 속성 사용</h2>
+<div id="output"></div>
+<button onclick="test2()">Click!</button>
+
+<hr/>
+<h2>다이얼로그(dialog) 사용</h2>
+<button onclick="showAlert()">alert</button>
+<button onclick="showConfirm()">confirm</button>
+<button onclick="showPrompt()">prompt</button>
+
+<hr/>
+<h2>콘솔 로그 출력</h2>
+<button onclick="showLog()">로그 출력</button>
+
+<script>
+function test() {
+	document.write('<p>Hello~~~</p>');
+	// HTML 문서의 로딩이 끝난 후 document.write()를 호출하면
+	// 문서 전체의 내용을 덮어쓰게 됨!
+}
+
+function test2() {
+	var output = document.getElementById('output');
+	output.innerHTML = '<p>innerHTML 사용</p>';
+	output.innerHTML += '<img src="images/bulb_on.gif" />';
+}
+
+function showAlert() {
+	alert('Hi~~~');
+}
+
+function showConfirm() {
+	var result = confirm('삭제하시겠습니까?');
+	document.getElementById('output').innerHTML = result;
+}
+
+function showPrompt() {
+	var result = prompt('이름을 입력하세요...', '이름');
+	document.getElementById('output').innerHTML = result;
+}
+
+function showLog() {
+	console.log('테스트......');
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript</title>
+</head>
+<body>
+
+<h1>DOM(Document Object Model)</h1>
+<input type="text" value="abcd"/>
+<p id="para1" style="color: white; background-color: pink;">
+여기는 <span style="font-weight: bold; color: black;">단락</span>입니다.
+</p>
+<div id="output" style="border: 1px solid grey;"></div>
+
+<script>
+var output = document.getElementById('output');
+var para = document.getElementById('para1');
+output.innerHTML += 'tagName: ' + para.tagName + '<br/>';
+output.innerHTML += 'parentElement: ' + para.parentElement + '<br/>';
+output.innerHTML += 'children : ' + para.children + '<br/>';
+output.innerHTML += 'firstElementChild: ' + para.firstElementChild + '<br/>';
+output.innerHTML += para.previousElementSibling + '<br/>';
+output.innerHTML += para.nextElementSibling + '<br/>';
+
+//HTML 요소가 가지고 있는 content : innerHTML
+output.innerHTML += para.innerHTML + '<br/>';
+//HTML 요소의 속성(attribute) : element.attribute;
+output.innerHTML += para.id + '<br/>';
+//HTML 요소의 style : element.style.property
+output.innerHTML += para.style.color + '<br/>';
+para.style.color = 'red';
+para.style.backgroundColor = 'lavender';
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

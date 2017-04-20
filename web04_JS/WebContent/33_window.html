@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+<script>
+	window.onload = function() {
+		var output = document.getElementById('output');
+		output.innerHTML += 'Hello';
+		
+		function displayDate() {
+			output.innerHTML += new Date().toLocaleString();
+		}
+	};	
+	// HTML 문서를 모두 로딩해서 화면(window)의 로딩이 끝났을 때 생성되는 이벤트
+	// 모든 자바스크립트 코드는 window.onload 이벤트 리스너(핸들러) 함수 내부에서 작성하는 것이 좋다.
+	// 	1) 모든 DOM 객체들이 생성된 후 -> getElement를 안심하고 사용할 수 있다
+	//		2) 모든 변수가 이벤트 리스너의 지역 변수가 됨 -> 의도치 않게 window 객체가 가지고 있는 전역변수(프로퍼티)를 변경하는 것을 방지한다
+	
+</script>
+</head>
+<body>
+<h1>JavaScript window 객체</h1>
+<div id="output"></div>
+<div id="out2"></div>
+<!-- 
+	DOM(Document Object Model) : html, head, body, ....
+	BOM(Browser Object Model) : window, screen, location, history, navigation
+-->
+<script>
+	var out2 = document.getElementById('out2');
+	var innerWidth = 100;
+	out2.innerHTML += 'width : ' + window.innerWidth;
+</script>
+</body>
+</html> 

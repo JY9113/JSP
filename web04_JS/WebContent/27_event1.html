@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<h1>JavaScript 를 사용한 HTML 이벤트 처리</h1>
+<!--
+	HTML 이벤트 처리 방법 :
+		1. HTML 태그 안에서 이벤트 속성(attribute)에 이벤트 처리 코드를 직접 작성
+		2. HTML 태그의 이벤트 속성에 함수를 설정하고, script에서 함수를 구현
+		3. script 안에서 이벤트 리스너(핸들러)를 직접 등록
+-->
+<p onclick="style.backgroundColor='purple'; style.color='white';">onclick 이벤트에서 코드를 직접 작성</p>
+<p onclick="alert('HELLO')">다이얼로그(pop-up) 띄우기</p>
+<p id="para" onclick="change()">onclick속성에서 JS 함수 호출</p>
+<p id="para2">script에서 이벤트 리스너 등록</p>
+<script>
+function change(para) {
+	var para = document.getElementById('para');
+	// content 변경 : innerHTML
+	para.innerHTML = 'HELLO, JavaScript Event!';
+	// style 변경 : style.property
+	para.style.border = '2px solid green';
+	para.style.backgroundColor = 'lightyellow';
+	para.style.color = 'navy';
+	para.style.fontSize = '2em';	// 1em : 브라우저에서 설정된 기본 폰트크기
+	para.style.margin = '50px';
+}
+
+var para2 = document.getElementById('para2');
+// HTML element에 이벤트 핸들러 등록
+para2.onclick = function () {
+	para2.innerHTML = '봄봄봄봄봄봄봄';
+	para2.style.border = '2px dashed hotpink';
+	para2.style.backgroundColor = 'lavender';
+	para2.style.color = 'pink';
+	para2.style.textAlign = 'center';
+};
+
+</script>
+</body>
+</html> 
