@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Link</title>
+<style>
+/* inline 요소들은 width/height 값을 설정할 수 없음! 
+	display 프로퍼티를 inline-block하면 화면 배치는 inline처럼 가로로 배치.
+	block 요소처럼 width 와 height를 설정할 수 있음
+*/
+
+	a {
+		text-decoration : none;
+		border : 1px solid #1EAAAA;
+		display : inline-block;
+		width : 100px;	/*그냥 width 주면 안먹는다! display 로 inline 속성을 줘야 width 사용 가능 */
+		text-align : center;
+	}
+	a:hover {
+		background-color : #1EAAAA;
+		color : white; 
+	}
+	a:active {
+		color : red;
+	}
+	a:visited {
+		background-color : yellow;
+	}
+</style>
+</head>
+<body>
+
+<h1>CSS Link, pseudo class</h1>
+<a href="http://www.google.com">구글</a>
+<a href="http://www.daum.net">카카오</a>
+<a href="http://www.naver.com">네이버</a>
+
+</body>
+</html>

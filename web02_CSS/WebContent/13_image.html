@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Image</title>
+<style>
+	.gallery {
+		float : left;
+		margin : 5px;
+		border : solid #FFAF00;
+		width : 200px;
+		height : 200px;
+	}
+	.gallery img {
+		width : 100%;
+		height : auto;
+	}
+	
+	.desc {
+		text-align : center;
+	}
+	
+	.gallery:hover {
+		border : 4px solid #EB5050;
+	}
+	
+	.gallery img:hover {
+		transition :  1s;
+		transform : rotate(50deg);
+	}
+</style>
+
+</head>
+<body>
+<h1 style="color:#FFAF00">CSS &amp; Transition</h1>
+	<div class="gallery">
+		<a href="images/lion.jpg"> <img alt="라이언" src="images/lion.jpg" /></a>
+		<div class="desc">라이언!!!!!!!!!</div>
+	</div>
+	<div class="gallery">
+		<a href="images/tube.jpg"> <img alt="튜브" src="images/tube.jpg"/></a>
+		<div class="desc">튜브!!!!!!!!</div>
+	</div>
+	<div class="gallery">
+		<a href="images/conimg.jpg"> <img alt="콘" src="images/conimg.jpg"/></a>
+		<div class="desc">콘!!!!!!!!!</div>
+	</div>
+	<div class="gallery">
+		<a href="images/apeach.jpg"> <img alt="어피치" src="images/apeach.jpg"/></a>
+		<div class="desc">어피치!!!!!!!!</div>
+	</div>
+</body>
+</html> 
