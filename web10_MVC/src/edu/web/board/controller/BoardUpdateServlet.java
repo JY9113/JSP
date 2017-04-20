@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import edu.web.board.domain.BoardVO;
 import edu.web.board.service.BoardService;
@@ -31,11 +32,20 @@ public class BoardUpdateServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int bno = Integer.parseInt(request.getParameter("bno"));
-		BoardVO vo = service.read(bno);
-		if (vo != null) {
-			request.setAttribute("boardVO", vo);
-			request.getRequestDispatcher("/WEB-INF/board/board-update.jsp").forward(request, response);			
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("userid");
+		String writer = request.getParameter("userid");
+		
+		System.out.println("writer : " + writer);
+		if(id.equals(writer)) {
+			int bno = Integer.parseInt(request.getParameter("bno"));
+			BoardVO vo = service.read(bno);
+			if (vo != null) {
+				request.setAttribute("boardVO", vo);
+				request.getRequestDispatcher("/WEB-INF/board/board-update.jsp").forward(request, response);			
+			}
+		} else {
+			response.sendRedirect("board-main");
 		}
 	}
 
