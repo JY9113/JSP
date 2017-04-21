@@ -34,8 +34,7 @@ public class BoardUpdateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("userid");
-		String writer = request.getParameter("userid");
-		
+		String writer = request.getParameter("boardVO");
 		System.out.println("writer : " + writer);
 		if(id.equals(writer)) {
 			int bno = Integer.parseInt(request.getParameter("bno"));
