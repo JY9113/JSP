@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.spring.ex02.BoardMapper">
+	<select id="select_all" resultType="BoardVO">
+		select * from ${test_board} order by ${bno} desc
+	</select>
+	<!--  
+	resultType: select를 했을 때 레코드 하나의 타입
+		원래는 패키지 이름을 포함한 전체경로의 클래스 이름을 사용해야 함
+		mybatis-config.xml에서 typeAliases 속성에서 package를 
+		정의했기 때문에 클래스 이름만 사용해도 됨
+	
+	${test_board}: mybatist-config.xml 파일에서
+	"test_board" 프로퍼티에 저장된 값(value)를 읽어 옴
+	-->
+	
+	<select id="select_by_bno" resultType="BoardVO">
+		select * from ${test_board} 
+		where ${bno} = #{bno}
+	</select>
+	<!-- #{}: SpEL(스프링에서 사용하는 Expression Language) -->
+	
+	<select id="select_by_userid" resultType="BoardVO">
+		select * from ${test_board}
+		where ${userid} like #{userid}
+	</select>
+	
+	<insert id="insert">
+		insert into ${test_board}(${title}, ${content}, ${userid})
+		values(#{title}, #{content}, #{userid})
+	</insert>
+	
+	<update id="update">
+		update ${test_board}
+		set ${title} = #{title}, ${content} = #{content}, 
+			${regdate} = sysdate
+		where ${bno} = #{bno}
+	</update>
+	
+	<delete id="delete">
+		delete from ${test_board} 
+		where ${bno} = #{bno}
+	</delete>
+	
+	<select id="select_by_title_content" resultType="BoardVO">
+		select * from ${test_board}
+		where ${title} like #{keyword} or
+			${content} like #{keyword}
+		order by ${bno} desc
+	</select>
+	
+	<select id="total_count" resultType="Integer">
+		select count(*) total_cnt from test_board
+	</select>
+	
+	<select id="paging" resultType="BoardVO">
+		select 
+			b.bno, b.title, b.content, b.userid, b.regdate 
+		from (
+  			select rownum rn, a.*
+  			from (
+    			select * from test_board order by bno desc
+  			) a
+		) b
+		where rn between #{start} and #{end}
+	</select>
+
+	
+</mapper>
+
+
+
+
+
+
+

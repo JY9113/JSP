@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+	<properties>
+		<property name="test_board" value="test_board"/>
+		<property name="bno" value="bno"/>
+		<property name="title" value="title"/>
+		<property name="content" value="content"/>
+		<property name="userid" value="userid"/>
+		<property name="regdate" value="regdate"/>
+		
+		<property name="test_member" value="test_member"/>
+		<property name="col_userid" value="userid"/>
+		<property name="col_pwd" value="pwd"/>
+		<property name="col_email" value="email"/>
+		<property name="col_active" value="active"/>
+	</properties>
+	
+	<typeAliases>
+		<package name="edu.spring.ex02.domain"/>
+	</typeAliases>
+	
+</configuration>
+
+
+
+
+
+
