@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.spring.ex04.MemberMapper">
+
+	<select id="login" resultType="MemberVO">
+		select * from ${table_member}
+		where ${col_userid} = #{userid} and 
+		${col_pwd} = #{pwd} and
+		${col_active} = 'Y'
+	</select>
+
+</mapper>
