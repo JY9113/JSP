@@ -11,7 +11,7 @@
 <form action="loginPOST" method="post">
 	<input type="text" name="userid"/>
 	<input type="password" name="userpw"/>
-	<input type="button" value="회원가입"/>
+	<input type="submit" value="회원가입"/>
 </form>
 </body>
 </html>

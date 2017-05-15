@@ -3,12 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTE-8">
+<meta charset="UTF-8" />
 <title>Insert title here</title>
 </head>
 <body>
-<h1>sample1.jsp</h1>
-<h2>안녕하세요.......</h2>
-<h3>Spring Framework</h3>
+
+<h1>Product 결과 페이지</h1>
+상품 이름: ${product.pname}<br/>
+상품 가격: ${product.price}<br/>
+
 </body>
 </html>

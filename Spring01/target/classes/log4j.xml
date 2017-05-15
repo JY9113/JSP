@@ -10,6 +10,11 @@
 		</layout>
 	</appender>
 	
+	<!--  Log 레벨과 메소드 
+			all > debug > info > warn > error > fatal > off
+			trace(), debug(), info(), warn(), error(), fatal()
+	-->
+	
 	<!-- Application Loggers -->
 	<logger name="edu.spring.ex01">
 		<level value="info" />

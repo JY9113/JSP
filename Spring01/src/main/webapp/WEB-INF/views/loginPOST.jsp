@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>sample1.jsp</h1>
-<h2>안녕하세요.......</h2>
-<h3>Spring Framework</h3>
+<h1>로그인 결과</h1>
+ID : ${userid }<br/>
+PW : ${userpw }<br>
 </body>
 </html>

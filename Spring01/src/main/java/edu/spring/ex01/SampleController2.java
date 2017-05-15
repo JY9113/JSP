@@ -26,7 +26,9 @@ public class SampleController2 {
 	
 	@RequestMapping(value="/test3")
 	public String test3(Model model, String username, int age){
-		logger.info("test3()호출 : username = " + username + " age = " + age);
+		logger.info("test3()호출");
+		logger.info("username : " + username);
+		logger.info("age : " + age);
 		model.addAttribute("username", username);
 		model.addAttribute("age", age);
 		return "param-test";
