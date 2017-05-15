@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+   <properties>
+      <property name="test_board" value="test_board"/>
+      <property name="bno" value="bno"/>
+      <property name="title" value="title"/>
+      <property name="content" value="content"/>
+      <property name="userid" value="userid"/>
+      <property name="regdate" value="regdate"/>
+      <property name="replycnt" value="replycnt"/>
+      
+      <property name="test_member" value="test_member"/>
+      <property name="col_userid" value="userid"/>
+      <property name="col_pwd" value="pwd"/>
+      <property name="col_email" value="email"/>
+      <property name="col_active" value="active"/>
+      
+      <property name="test_reply" value="test_reply"/>
+      <property name="col_rno" value="rno"/>
+      <property name="col_bno" value="bno"/>
+      <property name="col_rtext" value="rtext"/>
+      <property name="col_replier" value="replier"/>
+      <property name="col_regdate" value="regdate"/>
+   </properties>
+   
+   <typeAliases>
+      <package name="edu.spring.ex03.domain"/>
+      <!-- <typeAlias type="edu.spring.ex03.domain.BoardVO"
+         alias="BoardVO"/>
+      <typeAlias type="edu.spring.ex03.domain.ReplyVO"
+         alias="ReplyVO"/> -->
+   </typeAliases>
+   
+</configuration>
+
+
+
+
+
