@@ -21,6 +21,7 @@
 			var team_val = this.options[this.selectedIndex].value;
 			var vo = "<c:out value="${teamList}" />";
 // 			var team_member = '${teamList}';
+
 			var result = ${vo.team_member};
 			$('#selected_member').append(result).append("<br/>");	
 		});
