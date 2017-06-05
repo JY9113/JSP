@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="project.spring.together.ChatMapper">
+	
+	<insert id="insert_chat">
+		insert into ${chat} (${chat_num}, ${chat_file}, ${chat_member})
+		values (#{chat_num}, #{chat_file}, #{chat_member})	
+	</insert>
+	
+	<select id="select_chat" resultType="ChatVO">
+		select * from ${chat} order by ${chat_num}
+	</select>
+	
+	<select id="get_chat_file" resultType="String">
+		select ${chat_file} from ${chat}
+		where ${chat_num} = #{chat_num}
+	</select>
+</mapper>

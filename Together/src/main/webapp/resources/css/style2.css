@@ -1,0 +1,190 @@
+
+/* ����Ŭ���� */
+.frame_g {
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   border: 1px solid #000;
+   opacity: 0.1;
+   filter: alpha(opacity =   10);
+   cursor: pointer;
+   z-index: 10
+}
+
+.list_thumb li {
+   overflow: hidden;
+}
+
+/* ����� �̹��� ū Ʋ */
+.list_thumb .link_cmt {
+   display: block;
+   float: left;
+   position: relative;
+}
+
+.list_thumb .thumb_cmt {
+   vertical-align: top
+}
+
+.list_thumb .link_cmt .tit_writer {
+   display: block;
+   margin-top: 5px;
+   font-size: 12px;
+   color: #000;
+   line-height: 14px;
+   text-align: center
+}
+
+.list_thumb .desc_cmt {
+   overflow: hidden;
+   font-weight: bold;
+   color: #000
+}
+
+/* ��ǳ�� */
+.link_bubble {
+   display: inline-block;
+   position: relative;
+   margin-left: 13px;
+   padding: 10px 10px 10px 10px;
+   border: 1px solid #cecece;
+   border-radius: 4px;
+   font-size: 11px;
+   color: #333;
+   line-height: 15px;
+   background-color: #fff;
+   height: 40px;
+}
+
+/* �� */
+.txt_desc {
+   display: inline-block;
+   line-height: 18px;
+   text-align: left;
+   margin-top:3px;
+}
+
+
+.list_thumb .desc_cmt .txt_time {
+   display: block;
+   margin-top: 3px;
+   font-weight: normal;
+   font-size: 10px;
+   color: #8e8d8d
+}
+
+
+.list_thumb .box_info {
+   display: block;
+   margin: 3px 11px 0 11px;
+   font-size: 12px;
+   color: #9f9f9f;
+   line-height: 16px
+}
+
+
+.ico_arr {
+   position: absolute;
+   top: 30%;
+   font-size: 0;
+   line-height: 0
+}
+
+.ico_arr::before {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 0;
+   border: solid transparent;
+   pointer-events: none
+}
+
+.ico_arr::after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 0;
+   border: solid transparent;
+   pointer-events: none
+}
+
+.list_thumb .ico_arrleft {
+   left: 0
+}
+
+.list_thumb .ico_arrleft::before {
+   left: -18px;
+   margin-top: -4px;
+   border-right-color: #cecece;
+   border-width: 6px 9px
+}
+
+.list_thumb .ico_arrleft::after {
+   left: -16px;
+   margin-top: -3px;
+   border-right-color: #fff;
+   border-width: 5px 8px
+}
+
+.ico_arright {
+   right: 0
+}
+
+.ico_arright::before {
+   right: -18px;
+   margin-top: -4px;
+   border-left-color: #cecece;
+   border-width: 6px 9px
+}
+
+.ico_arright::after {
+   right: -16px;
+   margin-top: -3px;
+   border-left-color: #fff;
+   border-width: 5px 8px
+}
+
+.ico_arrleft::before {
+   left: 18px;
+   margin-top: -4px;
+   border-left-color: #cecece;
+   border-width: 6px 9px
+}
+
+.ico_arrleft::after {
+   left: -16px;
+   margin-top: -3px;
+   border-left-color: #fff;
+   border-width: 5px 8px
+}
+
+/* talk_right */
+.thumb_comm .talk_right .link_cmt {
+   float: right
+}
+
+.thumb_comm .talk_right .desc_cmt .link_bubble {
+   float: right;
+   margin: 0 0 0 0
+}
+
+.thumb_comm .talk_right .desc_cmt .inner_desc {
+   float: right;
+   margin-right: 13px
+}
+
+/* talk_left*/
+.thumb_comm .talk_left .link_cmt {
+   float: left
+}
+
+.thumb_comm .talk_left .desc_cmt .link_bubble {
+   float: left;
+   margin: 0 0 0 13px
+}
+
+.thumb_comm .talk_left .desc_cmt .inner_desc {
+   float: left;
+   margin-left: 13px
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<properties>
+		<!-- Together_member -->
+		<property name="table_member" value="together_member"/>
+		<property name="col_userid" value="userid"/>
+		<property name="col_name" value="name"/>
+		<property name="col_pwd" value="pwd"/>
+		<property name="col_team" value="team"/>
+		<property name="col_company" value="company_num"/>
+		<property name="col_email" value="email"/>
+		<property name="col_chatnum" value="chat_num"/>
+		
+		<property name="together_company" value="together_company"/>
+		<property name="company_num" value="company_num"/>
+<!-- 		<property name="company_name" value=""/> -->
+		<property name="company_logo" value="company_logo"/>		
+
+		<property name="together_chat" value="together_chat"/>
+		<property name="chat_num" value="chat_num"/>
+		<property name="chat_file" value="chat_file"/>
+		<property name="chat_member" value="chat_member"/>
+		
+		<property name="team" value="team"/>
+		<property name="team_name" value="team_name"/>
+		<property name="team_master" value="team_master"/>
+		<property name="team_member" value="team_member"/>
+		<property name="team_num" value="team_num"/>
+	</properties>
+	
+<typeAliases>
+<package name="project.spring.together.domain"/>
+</typeAliases>
+</configuration>

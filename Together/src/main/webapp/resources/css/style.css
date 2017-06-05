@@ -1,0 +1,2087 @@
+@font-face {
+    font-family:'NanumGothic';
+    src: url('images/NanumGothic.eot');
+    src: url('images/NanumGothic.eot?#iefix') format('embedded-opentype'),
+         url('images/NanumGothic.woff') format('woff'),
+         url('images/NanumGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#messageBox {
+	margin-left : 10%;
+	width : 70%;
+}
+
+@media screen and (max-width: 350px){
+
+.logo{
+width:100%; 
+margin-top:45%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:30%;
+}
+
+/* 출력 하는 곳 - 파란 채팅방 화면 */
+.chatbox_style{
+width:100%;
+height: 80%;
+background: white;
+overflow-x: hidden;
+position:relative;
+}
+
+
+.market{
+margin-top : 5%;
+margin-left:3%;
+width:10%;
+}
+
+.kbutton{
+margin-top:5%;
+width:12%;
+ margin-right:2%;
+}
+
+.send{
+margin-top:5%;
+width:10%;
+margin-right:1%;
+ }
+ 
+ .inputLine{
+ margin-right:1%;
+ padding-left:2%;
+background-color:white;
+ border: solid white; 
+ border-top-width:25px;
+ border-left-width:5px; 
+ }
+ 
+   /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:38%;
+	position:absolute;
+	top: 100px;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:28%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+
+
+/* textarea */
+.inputSource {
+outline: none;
+	margin-top:5%;
+	width: 50%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:20%;
+}
+
+.label{
+font-size:8pt;
+position:relative;
+width:10%;
+left:2%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 30%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:50%;
+}
+
+.details {
+	position: absolute;
+	width:30%;
+	left: 40%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:50%;
+}
+.details ul{
+	list-style-type: none;
+	margin-left:20%;
+	padding:0;
+	width:10%;
+	overflow:auto;
+	display:table;
+}
+
+.details2 {
+	top:1%;
+	position: absolute;
+	width:30%;
+	left:0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:20%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin:9px;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+
+@media screen and (min-width:351px) and (max-width: 500px){
+
+.logo{
+width:100%; 
+margin-top:45%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:33%;
+}
+
+.chatbox_style{
+width:100%;
+height: 70%;
+background: white;
+overflow-x: hidden;
+position:relative;
+}
+
+.market{
+margin-top:3%;
+margin-left:3%;
+width:10%;
+}
+
+.kbutton{
+margin-top:3%;
+width:12%;
+}
+
+.send{
+margin-top:3%;
+width:10%;
+ }
+ 
+.inputLine{
+ margin-right:1%;
+ padding-left:2%;
+ background-color:white;
+ border: solid white; 
+ border-top-width:25px;
+ border-left-width:5px; 
+ }
+ 
+.previewbox_style {
+background-color: #D8D8D8;
+width: 100%;
+height:38%;
+position:absolute;
+top: 130px;
+display: none;
+z-index: 1;
+}
+
+.inputFirstLine {
+margin-top:19%;
+padding-top:5%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+ 
+ /* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height:33%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+ 
+/* textarea */
+.inputSource {
+	outline: none;
+	margin-top:1%;
+	width: 55%;
+}
+
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:20%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:3%;
+width:10%;
+text-align:left;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:90%;
+}
+
+.details {
+	position: absolute;
+	width:30%;
+	left: 40%;
+	text-align:center;
+	padding-bottom:5px;
+}
+
+.details ul{
+	list-style-type: none;
+	margin-left:20%;
+	padding:0;
+	overflow:auto;
+	display:table;
+	font-size:90%;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:30%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:10%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin:9px;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+
+@media screen and (min-width:501px) and (max-width:700px){
+
+.logo{
+width:80%; 
+margin-top:35%;
+margin-left:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:40%;
+}
+
+.chatbox_style{
+width:100%;
+height: 70%;
+background: white;
+overflow-x: hidden;
+position:relative;
+}
+
+.market{
+margin-top:5%;
+margin-left:3%;
+width:8%;
+}
+
+.kbutton{
+margin-top:5%;
+width:10%;
+}
+
+.send{
+margin-top:5%;
+width:8%;
+margin-right:1%;
+ }
+ 
+.inputLine{
+margin-right:1%;
+padding-left:2%;
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:38%;
+	position:absolute;
+	top: 180px;
+	display: none;
+	z-index: 1;
+}
+.inputFirstLine {
+margin-top:15%;
+padding-bottom:5%;
+width: 100%;
+height: 10%;
+background: #f1a9c3;
+}
+ 
+/* textarea */
+.inputSource {
+outline: none;
+	margin-top:1%;
+	width: 60%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:20%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:4%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 35%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:30%;
+	left: 40%;
+	text-align:center;
+	padding-bottom:5px;
+}
+.details ul{
+	list-style-type: none;
+	margin-left:30%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:30%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin:9px;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+
+@media screen and (min-width:701px) and (max-width:800px){
+
+.logo{
+width:70%; 
+margin-left:20%;
+margin-top:20%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:42%;
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 80%;
+background: white;
+overflow-x: hidden;
+}
+
+.market{
+margin-top:5%;
+margin-left:4%;
+width:6%;
+}
+
+.kbutton{
+margin-top:5%;
+width:7%;
+}
+
+.send{
+margin-top:5%;
+width:7%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:35%;
+	position:absolute;
+	top: 15%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:19%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+
+/* textarea */
+.inputSource {
+outline: none;
+margin-top:1%;
+width: 70%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+margin-top:3%;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 40%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:30%;
+	left: 40%;
+	text-align:center;
+	padding-bottom:5px;
+}
+
+.details ul{
+	list-style-type: none;
+	margin-left:20%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+
+.details2 {
+	top:1%;
+	position: absolute;
+	width:30%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:10%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin:9px;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+
+@media screen and (min-width:801px) and (max-width:900px){
+
+.logo{
+width:50%; 
+margin-left:28%;
+margin-top:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:42%;
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 80%;
+background: white;
+overflow-x: hidden;
+}
+
+.market{
+margin-top:5%;
+margin-left:2%;
+width:5%;
+}
+
+.kbutton{
+margin-top:5%;
+width:6%;
+}
+
+.send{
+margin-top:5%;
+width:6%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:35%;
+	position:absolute;
+	top: 15%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:19%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+
+/* textarea */
+.inputSource {
+outline: none;
+	margin-top:1%;
+	width: 75%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+	left:5%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:50%;
+	left: 20%;
+	padding-bottom:5px;
+}
+
+.details  button{
+	position: absolute;
+	width:17%;
+	left: 45%;
+	padding-bottom:5px;
+}
+
+.details ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:50%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:100%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+
+@media screen and (min-width:901px) and (max-width:1000px){
+
+.logo{
+width:50%; 
+margin-left:28%;
+margin-top:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:46%;
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 80%;
+background: white;
+overflow-x: hidden;
+}
+
+.market{
+margin-top:5%;
+margin-left:2%;
+width:5%;
+}
+
+.kbutton{
+margin-top:5%;
+width:6%;
+}
+
+.send{
+margin-top:5%;
+width:6%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:35%;
+	position:absolute;
+	top: 15%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:19%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+
+/* textarea */
+.inputSource {
+outline: none;
+	margin-top:1%;
+	width: 75%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+	left:5%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:50%;
+	left: 30%;
+	padding-bottom:5px;
+}
+.details  button{
+	position: absolute;
+	width:13%;
+	left: 45%;
+	padding-bottom:5px;
+}
+.details ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:50%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:100%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+
+@media screen and (min-width:1001px) and (max-width:1200px){
+
+.logo{
+width:50%; 
+margin-left:28%;
+margin-top:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:46%;
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 80%;
+background: white;
+overflow-x: hidden;
+}
+
+.market{
+margin-top:5%;
+margin-left:3%;
+width:4%;
+}
+
+.kbutton{
+margin-top:5%;
+width:5%;
+}
+
+.send{
+margin-top:5%;
+width:5%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:33%;
+	position:absolute;
+	top: 15%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:15%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+
+/* textarea */
+.inputSource {
+outline: none;
+	margin-top:1%;
+	width: 75%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+	left:5%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:50%;
+	left: 30%;
+	padding-bottom:5px;
+}
+.details  button{
+	position: absolute;
+	width:10%;
+	left: 45%;
+	padding-bottom:5px;
+}
+.details ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:50%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:100%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+@media screen and (min-width:1201px) and (max-width:1300px){
+
+.logo{
+width:50%; 
+margin-left:28%;
+margin-top:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:46%;
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 80%;
+background: white;
+overflow-x: hidden;
+}
+
+.market{
+margin-top:4%;
+margin-left:2%;
+width:5%;
+}
+
+.kbutton{
+margin-top:4%;
+width:6%;
+}
+
+.send{
+margin-top:4%;
+width:6%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:30%;
+	position:absolute;
+	top: 13%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:19%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+/* textarea */
+.inputSource {
+outline: none;
+margin-top:1%;
+width: 75%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+	left:5%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:50%;
+	left: 30%;
+	padding-bottom:5px;
+}
+.details  button{
+	position: absolute;
+	width:10%;
+	left: 45%;
+	padding-bottom:5px;
+}
+.details ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:50%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:100%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+@media screen and (min-width:1301px) and (max-width:1400px){
+
+.logo{
+width:50%; 
+margin-left:28%;
+margin-top:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:46%;
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 47%;
+background: white;
+overflow-x: hidden;
+}
+
+.market{
+margin-top:5%;
+margin-left:4%;
+width:4%;
+}
+
+.kbutton{
+margin-top:5%;
+width:5%;
+}
+
+.send{
+margin-top:5%;
+width:5%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:28%;
+	position:absolute;
+	top: 13%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:19%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+
+/* textarea */
+.inputSource {
+outline: none;
+margin-top:1%;
+width: 75%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+	left:5%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:50%;
+	left: 30%;
+	padding-bottom:5px;
+}
+.details  button{
+	position: absolute;
+	width:10%;
+	left: 45%;
+	padding-bottom:5px;
+}
+.details ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:50%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:100%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+@media screen and (min-width:1401px) and (max-width:1500px){
+
+.logo{
+width:50%; 
+margin-left:28%;
+margin-top:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:46%;
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 47%;
+background: white;
+overflow-x: hidden;
+}
+
+.market{
+margin-top:3%;
+margin-left:4%;
+width:3%;
+}
+
+.kbutton{
+margin-top:3%;
+width:4%;
+}
+
+.send{
+margin-top:3%;
+width:4%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:25%;
+	position:absolute;
+	top: 13%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:19%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+
+/* textarea */
+.inputSource {
+outline: none;
+margin-top:1%;
+width: 75%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+	left:5%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:50%;
+	left: 30%;
+	padding-bottom:5px;
+}
+
+.details button {
+	position: absolute;
+	width:10%;
+	left: 45%;
+	padding-bottom:5px;
+}
+
+.details ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:50%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:100%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+@media screen and (min-width:1501px) and (max-width:1600px){
+
+.logo{
+width:50%; 
+margin-left:28%;
+margin-top:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:46%;
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 47%;
+background: white;
+overflow-x: hidden;
+}
+
+.market{
+margin-top:3%;
+margin-left:4%;
+width:3%;
+}
+
+.kbutton{
+margin-top:3%;
+width:4%;
+}
+
+.send{
+margin-top:3%;
+width:4%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:25%;
+	position:absolute;
+	top: 13%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:19%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+
+/* textarea */
+.inputSource {
+outline: none;
+margin-top:1%;
+width: 75%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+	left:5%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:50%;
+	left: 30%;
+	padding-bottom:5px;
+}
+
+.details  button{
+	position: absolute;
+	width:10%;
+	left: 45%;
+	padding-bottom:5px;
+}
+
+.details ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:50%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:100%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+@media screen and (min-width:1601px) and (max-width:1800px){
+
+.logo{
+width:50%; 
+margin-left:28%;
+margin-top:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:46%;
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 47%;
+background: white;
+overflow-x: hidden;
+}
+
+.market{
+margin-top:3%;
+margin-left:5%;
+width:3%;
+}
+
+.kbutton{
+margin-top:3%;
+width:4%;
+}
+
+.send{
+margin-top:3%;
+width:4%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:23%;
+	position:absolute;
+	top: 13%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:18%;
+padding-bottom:5%;
+width: 100%;
+height: 15%;
+background: #f1a9c3;
+}
+
+/* textarea */
+.inputSource {
+outline: none;
+margin-top:1%;
+width: 75%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+	left:5%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:50%;
+	left: 30%;
+	padding-bottom:5px;
+}
+
+.details button{
+	position: absolute;
+	width:10%;
+	left: 45%;
+	padding-bottom:5px;
+}
+
+.details ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:50%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:100%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+@media screen and (min-width:1801px) {
+
+.logo{
+width:50%; 
+margin-left:28%;
+margin-top:15%;
+}
+
+.join{
+margin-top: 5%; 
+margin-left:45%;	
+}
+
+.chatbox_style{
+position:relative;
+width:100%;
+height: 70%;
+background: white;
+overflow-x: hidden;
+margin-bottom:5%;
+}
+
+.market{
+margin-top:1.5%;
+margin-left:5%;
+width:2%;
+}
+
+.kbutton{
+margin-top:1.5%;
+width:3%;
+}
+
+.send{
+margin-top:2%;
+width:3%;
+margin-right:1%;
+ }	
+ 
+.inputLine{
+padding-left:2%;
+margin-right:1%;	 	
+background-color:white;
+border: solid white; 
+border-top-width:25px;
+border-left-width:5px; 
+}
+ 
+  /* 미리보기 */
+.previewbox_style {
+	background-color: #D8D8D8;
+	width: 100%;
+	height:23%;
+	position:absolute;
+	top: 20%;
+	display: none;
+	z-index: 1;
+}
+ 
+.inputFirstLine {
+margin-top:15%;
+padding-bottom:1%;
+width: 100%;
+height: 12%;
+background: #f1a9c3;
+}
+
+/* textarea */
+.inputSource {
+outline: none;
+margin-top:1%;
+width: 75%;
+}
+
+/* 모션 예시 이미지 */
+.motionimg {
+	width:15%;
+	left:5%;
+}
+.label{
+font-size:10pt;
+position:relative;
+left:2%;
+width:10%;
+text-align:left;
+}
+
+/* 입력 받는 곳 전체 */
+.input_box {
+	overflow: hidden;
+	position: absolute;
+	width:100%;
+	height: 50%;
+	background: #f1a9c3;
+	z-index: 3;
+}
+
+.sebu{
+text-align: center; 
+line-height:50px; 
+font-size:100%;
+}
+
+.details {
+	position: absolute;
+	width:50%;
+	left: 30%;
+	padding-bottom:5px;
+}
+
+.details button{
+	position: absolute;
+	width:10%;
+	left: 45%;
+	padding-bottom:5px;
+}
+
+.details ul{
+	list-style-type: none;
+	margin-left:43%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+.details2 {
+	top:1%;
+	position: absolute;
+	width:50%;
+	left: 0%;
+	text-align:center;
+	padding-bottom:5px;
+	font-size:100%;
+}
+
+.details2 ul{
+	list-style-type: none;
+	margin-left:40%;
+	padding:0;
+	overflow:auto;
+	display:table;
+}
+}
+html { height: 100%}
+body { height: 100%; margin: 0; padding: 0; font-family:'NanumGothic';}
+
+/* 제목 - 키네틱 타이포그래*/
+.title_box {
+	padding-left:1%;
+	width:100%;
+	height: 8%;
+	background: #f1a9c3;
+}
+
+/* +버튼 */
+.foldMenuMain {
+	width: 5%;
+	height: 100%;
+}
+
+/*탭*/
+._tabClass {
+	height: 10%;
+	width: 100%;
+	text-align: left;
+	
+}
+
+/* 말풍선 */
+a.footnote {
+	cursor: help;
+	position: relative;
+	text-decoration: none !important;
+	color: #666;
+	text-indent: 0
+}
+
+.footnote sup {
+	color: crimson
+}
+
+.footnote span.note {
+	margin-left: -999em;
+	position: absolute;
+	padding: 10px;
+	background: #ffa;
+	border: 1px solid #ffad33;
+	text-align: left;
+	line-height: 1.3em
+}
+
+.footnote:hover span.note {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	right: -107px;
+	bottom: 2.5em;
+	z-index: 99;
+	width: 200px
+}
+
+.note_ttl {
+	display: block;
+	width: 100%;
+	margin: 0 auto 3px auto;
+	padding-bottom: 2px;
+	text-align: left;
+	border-bottom: 1px solid #fea;
+	color: crimson
+}
+
+div.footnote_desc {
+	border-top: 1px solid #ccc
+}
+
+.footnote:hover span.note:before {
+	content: "";
+	position: absolute;
+	bottom: -6px;
+	left: 105px;
+	border-width: 6px 6px 0;
+	border-style: solid;
+	border-color: #ffa transparent;
+	display: block;
+	width: 0;
+	z-index: 100
+}
+
+.footnote:hover span.note:after {
+	content: "";
+	position: absolute;
+	bottom: -7px;
+	left: 104px;
+	border-width: 7px 7px 0;
+	border-style: solid;
+	border-color: #ffad33 transparent;
+	display: block;
+	width: 0
+}
+
+#_tabs input:nth-of-type(1),#_tabs input:nth-of-type(1)   ~ div:nth-of-type(1),
+#_tabs input:nth-of-type(2),#_tabs input:nth-of-type(2) ~ div:nth-of-type(2),
+#_tabs input:nth-of-type(3),#_tabs input:nth-of-type(3)  ~ div:nth-of-type(3)
+ {
+	display: none
+}
+
+#_tabs input:nth-of-type(1):checked           ~ div:nth-of-type(1),#_tabs input:nth-of-type(2):checked 
+	         ~ div:nth-of-type(2),#_tabs input:nth-of-type(3):checked        
+	  ~ div:nth-of-type(3) {
+	display: block
+}
+
+/* 탭 메뉴 */
+#_tabs>label {
+	display: inline-block;
+	margin-top:3px;
+	padding: 5px;
+	text-align: center;
+	width: 30%;
+	height: 50%;
+	font-weight: 700;
+	/*background: #C0C0C0;*/
+	color: #fff;
+}
+
+#_tabs>label:hover {
+	cursor: pointer
+}
+
+#_tabs input:nth-of-type(1):checked           ~ label:nth-of-type(1),#_tabs>label[for=tab1]:hover
+	{
+	background: #A9A9A9;
+	color: #000;
+}
+
+#_tabs input:nth-of-type(2):checked           ~ label:nth-of-type(2),#_tabs>label[for=tab2]:hover
+	{
+	background: #A9A9A9;
+	color: #000;
+}
+
+#_tabs input:nth-of-type(3):checked           ~ label:nth-of-type(3),#_tabs>label[for=tab3]:hover
+	{
+	background: #A9A9A9;
+	color: #000;
+}
+
+/* 텝 내용 부분 */
+.tab1_content,.tab2_content,.tab3_content {
+	padding: 0px;
+	/*background: #ddd;*/
+	width: 100%;
+	height: 100%;
+	/*position: absolute;*/
+	overflow: visible;
+	float: left;
+}
+
+/* 모션 예시 이미지 */
+
+
+.motionimg1 {
+	width:20%;
+	left:30%;
+}
+
+.motionimg2 {
+	width:30%;
+	left:30%;
+}
+
+/**** 두번째 탭 - 감정 ****/
+.motionpreview {
+	font-size: 30%;
+	font: inherit;
+	position: absolute;
+	left:40%;
+	width: 40%;
+	height: 120%;
+	background: #FFE4BC;
+	border-color: #FFE4BC;
+	padding : 1%;
+}
+
+.motionpreview p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 10%;
+	vertical-align: baseline;
+	font: inherit;
+}
+.motionpreview div{
+	line-height:5px;
+	margin : 5%;
+}
+
+/*** 감정 선택 ***/
+.emotions {
+	position: absolute;
+	left: 45%;
+	height: 65%;
+}
+.emotions2 {
+	position: absolute;
+	right: 62%;
+	height: 100%;
+	top:1%;
+}
+
+.motionbox {
+	width:50%;
+}
+
+/
+/*** 세부조절  ***/
+.details li{
+	display:inline;
+	float:left;
+	margin:3px;
+}
+
+.details input {
+	text-align: center;
+	display:block;
+}
+
+.detail_subject{
+	text-align: center;
+	font-weight: bold;
+	font-size: 13pt;	
+	margin-top:1px;
+}
+
+
+.details2 li{
+	display:inline;
+	float:left;
+	margin:3px;
+}
+
+.details2 input {
+	text-align: center;
+	display:block;
+}
+
+.detail2_subject{
+	text-align: center;
+	font-weight: bold;
+	font-size: 13pt;	
+	margin-top:1px;
+}
+
+
+table {
+	width : 100%;
+	height : 500px;
+}
+
+.select_member {
+	width : 100%;
+	height : 300px;	
+}
