@@ -19,11 +19,11 @@
 		var select_team = document.getElementById('#chat_team_select');		
 		$('#chat_team_select').change(function() {
 			var team_val = this.options[this.selectedIndex].value;
-			var vo = "<c:out value="${teamList}" />";
-// 			var team_member = '${teamList}';
-
-			var result = ${vo.team_member};
-			$('#selected_member').append(result).append("<br/>");	
+// 			var vo = "<c:out value="${teamList}" />";
+			<c:forEach var="vo" items="${teamList}">
+			var result = '${vo.team_member}';
+				$('#selected_member').append(result).append("<br/>");	
+			</c:forEach>
 		});
 
 	});
